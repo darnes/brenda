@@ -49,6 +49,17 @@ detailed help for each tool, run the tool with the -h option.
    directly by the user, but is remotely instantiated by brenda-run.
    Uses the SQS and S3 APIs.
 
+TODO:
+
+1. update format of the task in the brenda-work, so it take one more argument project name.
+project name is a directory within PROJECT_BASE_PATH.
+ task will be valid json object with command(current one) and project name, which is name if folder project lies on s3
+
+2. Update the brenda-node code, so it read and new task files(json objects).
+Making sure that working dir may different on every task. 
+
+
+
 PLATFORMS SUPPORTED
 -------------------
 
