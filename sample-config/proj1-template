@@ -1,0 +1,4 @@
+{
+	"cmd": "blender -b proj1/*.blend -F PNG -o $OUTDIR/frame_###### -s $START -e $END -j $STEP -t 0 -a",
+	"project-name": "proj1.tar.gz"
+}
