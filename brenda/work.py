@@ -14,7 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import random
+import random, json
 from brenda import aws
 
 def subframe_iterator_defined(opts):
@@ -41,6 +41,13 @@ def push(opts, args, conf):
     # get task script
     with open(opts.task_script) as f:
         task_script = f.read()
+
+    try:
+        task = json.loads(task_script)
+    except ValueError:
+        print 'incorrect input : "%s"' % (task_script, )
+        exit(1)
+
 
     # build tasklist
     tasklist = []
