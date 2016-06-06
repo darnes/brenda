@@ -119,10 +119,14 @@ def get_s3_output_bucket_name(conf):
         bn[1] += '/'
     return bn
 
-def get_s3_output_bucket(conf):
+def get_s3_output_bucket(conf, project_name=None):
     bn = get_s3_output_bucket_name(conf)
     conn = get_s3_conn(conf)
     buck = conn.get_bucket(bn[0])
+
+    if project_name:
+        bn[1] += project_name + '/'
+
     return buck, bn
 
 def parse_sqs_url(url):
