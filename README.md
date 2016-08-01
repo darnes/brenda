@@ -830,7 +830,7 @@ $ pip install -U s3cmd
 Next, download and install Brenda:
 
 ```
-$ git clone http://github.com/jamesyonan/brenda.git
+$ git clone http://github.com/darnes/brenda.git
 $ cd brenda
 $ python setup.py install
 ```
